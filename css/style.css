@@ -491,6 +491,7 @@ h6,
     }
 }
 /* Popup container */
+/* Popup container */
 .popup {
     display: none; 
     position: fixed; 
@@ -720,4 +721,37 @@ color: #0a4b50;
     font-size: 20px; /* Caption font size */
     max-width: 80%; /* Responsive width */
 }
+/* Container for the map */
+.map__container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio for the map */
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+/* Responsive iframe */
+.ft__map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .map__container {
+        padding-bottom: 75%; /* Adjust aspect ratio for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .map__container {
+        padding-bottom: 100%; /* Square aspect ratio for very small screens */
+    }
+}
+
 

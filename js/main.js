@@ -164,6 +164,20 @@ function formatOutletData(data) {
     return formattedData;
 }
 
+// Event listener to close the popup when 'X' is clicked
+document.getElementById('closePopup').addEventListener('click', function() {
+    document.getElementById('popup').style.display = 'none'; // Hide the popup
+});
+
+// Event listener to close the popup if clicking outside the content
+window.addEventListener('click', function(event) {
+    const popup = document.getElementById('popup');
+    if (event.target == popup) {
+        popup.style.display = 'none'; // Hide the popup
+    }
+});
+
+
 function openImageModal() {
     var modal = document.getElementById("myModal");
     var modalImg = document.getElementById("img01");
