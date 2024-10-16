@@ -204,3 +204,17 @@ function openImageModal() {
     }
 }
 
+
+function currentyear() {
+    // Get the current year
+    const year = new Date().getFullYear();
+   const previos_year =year- 1
+
+    // Insert it into the element with ID "currentYear"
+    document.getElementById('currentYear').textContent = year;
+    document.getElementById('previos_year').textContent = previos_year;
+}
+
+// Call the function to update the year
+currentyear();
+
